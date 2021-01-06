@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
   // Express serves up public assets
   app.use(express.static("client/build"));
 
-  // Express will up index.html
+  // Express will serve up index.html
   const path = require("path");
   app.get("*", () => {
     path.resolve(__dirname, "client", "build", "index.html");
